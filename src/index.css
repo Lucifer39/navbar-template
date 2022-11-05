@@ -19,6 +19,7 @@ img {
 .navbar {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 0.5rem;
   background-color: var(--navbar-color);
   box-shadow: #a4c3b240 0px 30px 60px -12px, #6b90804d 0px 18px 36px -18px;
@@ -43,4 +44,51 @@ a:hover {
 a {
   text-decoration: none;
   color: #000000;
+}
+
+@media only screen and (min-width: 720px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .socials {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    padding: 2rem;
+    background-color: var(--navbar-color);
+    border: none;
+    margin-left: 5rem;
+  }
+
+  .linkContainer {
+    display: block;
+    position: absolute;
+    top: 5rem;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    background-color: var(--navbar-color);
+    padding: 1rem 5rem;
+    width: 100%;
+    transition: 1s;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links a {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .links li:hover {
+    background-color: var(--primary-color);
+  }
 }
